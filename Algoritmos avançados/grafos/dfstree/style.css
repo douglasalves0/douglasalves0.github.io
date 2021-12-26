@@ -1,0 +1,28 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.title{
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(30,30,30);
+    color: rgb(240,240,240);
+}
+
+.content{
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(230,230,230);
+    color: rgb(30,30,30);
+}
+
+.block{
+    padding: 20px;
+}
+
+.topics{
+    text-align: center;
+    list-style-type: none;
+    font-size: 17px;
+}
