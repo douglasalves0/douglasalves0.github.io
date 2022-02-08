@@ -24,8 +24,9 @@
             </div>
             <div class="block">
                 <p>
-                    Dado um array <strong>A</strong> contendo <strong>N</strong> elementos, e <strong>q</strong> 
-                    consultas a serem respondidas dos tipos:
+                    Dado um array <strong>A</strong> contendo <strong>N</strong> 
+                    elementos, e <strong>q</strong> consultas a serem respondidas 
+                    dos tipos:
                 </p>
             </div>
             <div class="block">
@@ -36,11 +37,12 @@
             </div>
             <div class="block">
                 <p>
-                    Para resolver o problema para uma função de soma, em que teríamos que somar
-                    os elementos de <strong>A</strong> da posição <strong>l</strong> à posição
-                    <strong>r</strong>, a <i>naive approach</i> para realizar a operação 1 funciona
-                    em O(1), pois podemos simplesmente trocar o valor dentro de <strong>Ai</strong> 
-                    pelo novo valor <strong>x</strong>, a implementação dessa função se parece com:
+                    Para resolver o problema para o primeiro tipo de operação, em que teríamos 
+                    apenas que trocar o valor em <strong>A</strong> da posição 
+                    <strong>i</strong>, a <i>naive approach</i> para realizar a operação 
+                    1 funciona em O(1), pois podemos simplesmente trocar o valor dentro 
+                    de <strong>Ai</strong> pelo novo valor <strong>x</strong>, a implementação 
+                    dessa função se parece com:
                 </p>
             </div>
             <div class="code">
@@ -99,7 +101,7 @@
                     O truque que aprenderemos nesta seção é o de encontrar o bit menos
                     significante de um número, isto é, o bit de menor valor que está
                     ligado em um dado número. Ex: 1001110<strong>1</strong>0, 
-                    100<strong>1</strong>000000, 10010<strong>1</strong>000
+                    100<strong>1</strong>00000, 10010<strong>1</strong>000
                 </p>
             </div>
             <div class="block">
@@ -114,15 +116,14 @@
                 </p>
             </div>
             <div class="block">
-                <p>
-                    7₍₁₀₎ = 00111₍₂₎ => -7₍₁₀₎ = 11001₍₂₎
-                </p>
-                <p>
-                    12₍₁₀₎ = 01100₍₂₎ => -12₍₁₀₎ = 10100₍₂₎
-                </p>
-                <p>
-                    3₍₁₀₎ = 00011₍₂₎ => -3₍₁₀₎ = 11101₍₂₎
-                </p>
+                <p>7₍₁₀₎ = 00111₍₂₎ => -7₍₁₀₎ = 11001₍₂₎</p>
+                <p>12₍₁₀₎ = 01100₍₂₎ => -12₍₁₀₎ = 10100₍₂₎</p>
+                <p>3₍₁₀₎ = 00011₍₂₎ => -3₍₁₀₎ = 11101₍₂₎</p>
+            </div>
+            <div class="block">
+                Observe também, que, por conta deste tipo de representação, podemos conseguir
+                o bit menos significante de um dado número <strong>V</strong> com a simples 
+                operação V&(-V), em que <strong>&</strong> é o operador bit a bit <strong>and</strong>.
             </div>
         </div>
         
