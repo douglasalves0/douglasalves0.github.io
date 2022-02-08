@@ -10,11 +10,11 @@
 
         <ul class="topics">
             <h2>Tópicos:</h2><br>
-            <li><a href="#introducao">1. Motivação</a></li>
-            <li><a href="#criacao">2. Descobrindo o bit menos significante</a></li>
+            <li><a href="#motivacao">1. Motivação</a></li>
+            <li><a href="#descobrindo o bit menos significante">2. Descobrindo o bit menos significante</a></li>
         </ul>
 
-        <div class="title"><h3 id="introducao">1. Motivação</h3></div>
+        <div class="title"><h3 id="motivacao">1. Motivação</h3></div>
         <div class="content">
             <div class="block">
                 <p>
@@ -84,6 +84,47 @@
             </div>
         </div>
 
+        <div class="title"><h3 id="descobrindo o bit menos significante">2. Descobrindo o bit menos significante</h3></div>
+        <div class="content">
+            <div class="block">
+                <p>
+                    Antes de darmos início ao entendimento da estrutura de dados em si,
+                    é importante aprendermos alguns truques em operações bit a bit
+                    que serão de grande utilidade mais adiante na compreensão da
+                    Fenwick tree.
+                </p>
+            </div>
+            <div class="block">
+                <p>
+                    O truque que aprenderemos nesta seção é o de encontrar o bit menos
+                    significante de um número, isto é, o bit de menor valor que está
+                    ligado em um dado número. Ex: 1001110<strong>1</strong>0, 
+                    100<strong>1</strong>000000, 10010<strong>1</strong>000
+                </p>
+            </div>
+            <div class="block">
+                <p>
+                    Por padrão, a maioria dos computadores modernos se utiliza de um
+                    estilo de representação binária que é nomeado de <i>complemento
+                    de 2</i>, nesse padrão, todo número positivo <strong>V</strong> 
+                    que é possível ser representado para uma certa quantidade de bits 
+                    tem sua representação negativa como sendo um número com com todos os
+                    bits de <strong>V</strong> negados adicionado a 1. Nesse caso por 
+                    exemplo para um número de 5 bits:
+                </p>
+            </div>
+            <div class="block">
+                <p>
+                    7₍₁₀₎ = 00111₍₂₎ => -7₍₁₀₎ = 11001₍₂₎
+                </p>
+                <p>
+                    12₍₁₀₎ = 01100₍₂₎ => -12₍₁₀₎ = 10100₍₂₎
+                </p>
+                <p>
+                    3₍₁₀₎ = 00011₍₂₎ => -3₍₁₀₎ = 11101₍₂₎
+                </p>
+            </div>
+        </div>
         
     </body>
 
