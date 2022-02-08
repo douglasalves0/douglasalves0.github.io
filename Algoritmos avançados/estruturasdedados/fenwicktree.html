@@ -1,0 +1,90 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+
+    <body>
+    
+        <div class="title"><h1 style="text-align:center">Fenwick tree</h1></div>
+
+        <ul class="topics">
+            <h2>Tópicos:</h2><br>
+            <li><a href="#introducao">1. Motivação</a></li>
+            <li><a href="#criacao">2. Descobrindo o bit menos significante</a></li>
+        </ul>
+
+        <div class="title"><h3 id="introducao">1. Motivação</h3></div>
+        <div class="content">
+            <div class="block">
+                <p>
+                    A Fenwick Tree é uma estrutura de dados que possibilita diminuir o tempo 
+                    de execução de programas que solucionam o seguinte problema:
+                </p>
+            </div>
+            <div class="block">
+                <p>
+                    Dado um array <strong>A</strong> contendo <strong>N</strong> elementos, e <strong>q</strong> 
+                    consultas a serem respondidas dos tipos:
+                </p>
+            </div>
+            <div class="block">
+                <ol>
+                    <li>Trocar o valor de <strong>Ai</strong> por <strong>x</strong>;</li>
+                    <li>Pegar o resultado de uma função reversível no intervalo [<strong>l</strong>,<strong>r</strong>] de <strong>A</strong>; </li>
+                </ol>
+            </div>
+            <div class="block">
+                <p>
+                    Para resolver o problema para uma função de soma, em que teríamos que somar
+                    os elementos de <strong>A</strong> da posição <strong>l</strong> à posição
+                    <strong>r</strong>, a <i>naive approach</i> para realizar a operação 1 funciona
+                    em O(1), pois podemos simplesmente trocar o valor dentro de <strong>Ai</strong> 
+                    pelo novo valor <strong>x</strong>, a implementação dessa função se parece com:
+                </p>
+            </div>
+            <div class="code">
+<xmp>função troca(posição, x){
+    A[posição] := x;
+}</xmp>
+            </div>
+            <div class="block">
+                <p>
+                    Entretanto, a segunda operação seria um pouco mais custosa, teríamos 
+                    que iterar elemento por elemento em <strong>A</strong> de <strong>l</strong>
+                    a <strong>r</strong> somando cada elemento de <strong>A</strong> no dado
+                    intervalo. Infelizmente, tal algoritmo pode fazer no máximo <strong>N</strong>
+                    operações, o que pode ser lento às vezes quando estamos lidando com grandes
+                    volumes de dados.
+                </p>
+            </div>
+            <div class="block">
+                <p>
+                    Este algoritmo realiza <strong>N</strong> operações quando recebe como
+                    entrada <strong>l</strong> = 1 e <strong>r</strong> = <strong>N</strong>, 
+                    e segue sua implementação abaixo:
+                </p>
+            </div>
+            <div class="code">
+<xmp>função somadora(l, r){
+    inteiro soma := 0;
+    para i de l até r{
+        soma := soma + A[i];
+    }
+    retorne soma;
+}</xmp>
+            </div>
+            <div class="block">
+                <p>
+                    Se antes conseguíamos apenas realizar a primeira e a segunda 
+                    operação  em O(1) e O(N) respectivamente, com a <strong>Fenwick 
+                    tree</strong> torna-se possível realizar ambas operações
+                    em O(log n), e isso é o que veremos adiante.
+                </p>
+            </div>
+        </div>
+
+        
+    </body>
+
+</html>
