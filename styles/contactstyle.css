@@ -1,0 +1,38 @@
+#contact{
+	background-color: rgb(10, 10, 10);
+}
+
+#contact h1{
+	padding-bottom: 50px;
+}
+
+#contact .box{
+	display: flex;
+}
+
+#contact .box .item{
+	flex: 1;
+	align-content: center;
+	font-size: 70px;
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+#contact .box .item{
+	flex: 1;
+	align-content: center;
+	font-size: 70px;
+	text-align: center;
+}
+
+#contact .box .item .fa-github:hover{
+	color: rgb(50,50,200);
+}
+
+#contact .box .item .fa-linkedin:hover{
+	color: rgb(30,30,255);
+}
+
+#contact .box .item .fa-whatsapp:hover{
+	color: rgb(30,255,30);
+}
